@@ -2,26 +2,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: React-frontend-app
+  name: reactfrontendapp
 spec:
   replicas: 2
   strategy:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: react-frontend-app
+      app: reactfrontendapp
       version: v1
       color: blue
   template:
     metadata:
-      name: react-frontend-app
+      name: reactfrontendapp
       labels:
-        app: react-frontend-app
+        app: reactfrontendapp
         version: v1
         color: blue
     spec:
       containers:
-      - name: react-frontend-appContainer
+      - name: reactfrontendappappContainer
         image: dockerdocker2023/frontend123454s
         imagePullPolicy: Always
         ports:
