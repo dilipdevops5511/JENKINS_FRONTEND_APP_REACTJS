@@ -9,14 +9,14 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: node-Backend-app
+      app: React-frontend-app
       version: v1
       color: blue
   template:
     metadata:
-      name: node-Backend-app
+      name: React-frontend-app
       labels:
-        app: node-Backend-app
+        app: React-frontend-app
         version: v1
         color: blue
     spec:
