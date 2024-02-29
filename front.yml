@@ -1,48 +1,29 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reactfrontendapp
+  name: backendbluedeployment
 spec:
   replicas: 2
   strategy:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: reactfrontendapp
+      app: node-Backend-app
       version: v1
       color: blue
   template:
     metadata:
-      name: reactfrontendapp
+      name: node-Backend-app
       labels:
-        app: reactfrontendapp
+        app: node-Backend-app
         version: v1
         color: blue
     spec:
       containers:
-      - name: appContainer
+      - name: nodeappcontainers
         image: dockerdocker2023/frontend123454s
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8080
-          initialDelaySeconds: 15
-          periodSeconds: 20
-        
- 
+...
