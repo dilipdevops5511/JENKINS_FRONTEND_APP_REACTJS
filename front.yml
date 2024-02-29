@@ -9,21 +9,21 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: React-frontend-app
+      app: react-frontend-app
       version: v1
       color: blue
   template:
     metadata:
-      name: React-frontend-app
+      name: react-frontend-app
       labels:
-        app: React-frontend-app
+        app: react-frontend-app
         version: v1
         color: blue
     spec:
       containers:
-      - name: React-frontend-app
+      - name: react-frontend-appContainer
         image: dockerdocker2023/frontend123454s
         imagePullPolicy: Always
         ports:
-        - containerPort: 5555
+        - containerPort: 8080
 ...
