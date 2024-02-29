@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('http://a38fb26b7b6494126a639d94c031118a-60696875.ap-south-1.elb.amazonaws.com:5000/books')
+      .get('http://a338e1be81a5b4fa4b19b51dc71667bc-527308267.ap-south-1.elb.amazonaws.com:5555/books')
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
