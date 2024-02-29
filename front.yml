@@ -20,7 +20,7 @@ spec:
         color: blue
     spec:
       containers:
-      - name: reactfrontendappappContainer
+      - name: appContainer
         image: dockerdocker2023/frontend123454s
         imagePullPolicy: Always
         ports:
@@ -44,4 +44,5 @@ spec:
             port: 8080
           initialDelaySeconds: 15
           periodSeconds: 20
-      
+        
+ 
