@@ -16,7 +16,7 @@ const EditBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://af549a1e79ced43d09bf982787b706d3-134763431.ap-south-1.elb.amazonaws.com:5555/books/${id}`)
+    axios.get(`http://aad5225e6faf8463ab9c63978b8eadf1-1417549700.ap-south-1.elb.amazonaws.com:5555/books/${id}`)
     .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear)
