@@ -14,7 +14,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`http://af549a1e79ced43d09bf982787b706d3-134763431.ap-south-1.elb.amazonaws.com:5555/books/${id}`)
+      .delete(`http://aad5225e6faf8463ab9c63978b8eadf1-1417549700.ap-south-1.elb.amazonaws.com:5555/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Deleted successfully', { variant: 'success' });
